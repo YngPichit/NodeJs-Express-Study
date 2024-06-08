@@ -7,13 +7,18 @@ const debug = createDebug('app');
 // const debug = require('debug')('app');
 import morgan from 'morgan';
 // const morgan = require('morgan')
+//const path = require('path');
+import path from 'path';
+const __dirname = path.resolve();
 const app = express();
 const port = 3000;
+
 app.use(morgan('combined'));
+app.use(express.static(path.join(__dirname,"/public/")));
 
 app.get("/",(req,res)=>{
 
-    res.send("Hello everybody This new in Github");
+    res.send("Hello everybody This new in Github !!!!");
 
 })
 app.listen(port,()=>{
