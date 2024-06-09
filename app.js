@@ -11,19 +11,23 @@ import morgan from 'morgan';
 import path from 'path';
 const __dirname = path.resolve();
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,"/public/")));
 
+app.set("views","./src/views");
+app.set("view engine","ejs");
+
 app.get("/",(req,res)=>{
 
-    res.send("Hello everybody This new in Github !!!!");
+    //res.send('Hello everyone!');
+    res.render('index',{username:'YngJira !!!',customer:["Harry","Potter","Ronnie"]});
 
 })
-app.listen(port,()=>{
+app.listen(PORT,()=>{
 
-    console.log ("Listening on port" + chalk.blue(" : ",port));
-    debug ("Listening on port" + chalk.blue(" : ",port));
+    console.log ("Listening on port" + chalk.blue(" : ",PORT));
+    debug ("Listening on port" + chalk.green(" : ",PORT));
 
 })
