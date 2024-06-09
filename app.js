@@ -10,6 +10,7 @@ import morgan from 'morgan';
 //const path = require('path');
 import path from 'path';
 const __dirname = path.resolve();
+const productRouter = express.Router();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -18,6 +19,15 @@ app.use(express.static(path.join(__dirname,"/public/")));
 
 app.set("views","./src/views");
 app.set("view engine","ejs");
+
+productRouter.route("/").get((req,res)=>{
+    res.send('Hello World !! I am Product');
+});
+productRouter.route("/1").get((req,res)=>{
+    res.send('Hello World !! I am Product 1');
+});
+
+app.use("/products",productRouter);
 
 app.get("/",(req,res)=>{
 
