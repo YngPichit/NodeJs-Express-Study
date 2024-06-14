@@ -21,7 +21,14 @@ app.set("views","./src/views");
 app.set("view engine","ejs");
 
 productRouter.route("/").get((req,res)=>{
-    res.render("products");
+    res.render("products",{
+        products:[
+            {Title:'เอสเพรสโซ่',Description:'เข้มข้น ขมพิเศษ',Price:'60'},
+            {Title:'Americano',Description:'เข้มข้น ไม่ใส่นม',Price:'45'},
+            {Title:'Mocar',Description:'เข้มข้น ผสมโกโก้',Price:'65'},
+            {Title:'คาปูชิโน่',Description:'เข้มข้น ราดครีมนม',Price:'55'},
+        ],
+    });
 });
 productRouter.route("/1").get((req,res)=>{
     res.send('Hello World !! I am Product 1');
