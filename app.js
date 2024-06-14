@@ -21,10 +21,10 @@ app.set("views","./src/views");
 app.set("view engine","ejs");
 
 productRouter.route("/").get((req,res)=>{
-    res.send('Hello World !! I am Product');
+    res.render("products");
 });
 productRouter.route("/1").get((req,res)=>{
-    res.render("products");
+    res.send('Hello World !! I am Product 1');
 });
 
 app.use("/products",productRouter);
