@@ -280,10 +280,10 @@
     <section id = "features", class = "ud-features">
       <div calss = "container">
         <H1>Hello World</H1>
-        <% product.map((product)=>{ %>
-          <h4><% =product.Title %></h4>
-          <p><% =product.Description %></p>
-          <p>ราคา : <% =product.Price %> บาท</p>
+        <% products.map((product)=>{ %>
+          <h4><%=product.Title %></h4>
+          <p><%=product.Description %></p>
+          <p>ราคา : <%=product.Price %> บาท</p>
         <%})%>
       </div>
     </section>
