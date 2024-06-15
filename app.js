@@ -8,8 +8,10 @@ const debug = createDebug('app');
 import morgan from 'morgan';
 // const morgan = require('morgan')
 //const path = require('path');
-const products = require("./data/products.json");
+import products from "./data/products.json" assert {type:"json"}
+//const products = require("./data/products.json");
 import path from 'path';
+import { assert } from 'console';
 const __dirname = path.resolve();
 const productRouter = express.Router();
 const app = express();
