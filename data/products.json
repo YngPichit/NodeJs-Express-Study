@@ -3,6 +3,7 @@
         {"Title":"เอสเพรสโซ่","Description":"เข้มข้น ขมพิเศษ","Price":"60"},
         {"Title":"Americano","Description":"เข้มข้น ไม่ใส่นม","Price":"45"},
         {"Title":"Mocar","Description":"เข้มข้น ผสมโกโก้","Price":"65"},
-        {"Title":"คาปูชิโน่","Description":"เข้มข้น ราดครีมนม","Price":"55"}
+        {"Title":"คาปูชิโน่","Description":"เข้มข้น ราดครีมนม","Price":"55"},
+        {"Title":"ชานมไข่มุก","Description":"ชานม พร้อมไข่มุกเคี้ยวหนุบหนับ","Price":"35"}
     ]
 }
