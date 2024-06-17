@@ -1,9 +1,34 @@
 {
-    "products":[
-        {"Title":"เอสเพรสโซ่","Description":"เข้มข้น ขมพิเศษ","Price":"60"},
-        {"Title":"Americano","Description":"เข้มข้น ไม่ใส่นม","Price":"45"},
-        {"Title":"Mocar","Description":"เข้มข้น ผสมโกโก้","Price":"65"},
-        {"Title":"คาปูชิโน่","Description":"เข้มข้น ราดครีมนม","Price":"55"},
-        {"Title":"ชานมไข่มุก","Description":"ชานม พร้อมไข่มุกเคี้ยวหนุบหนับ","Price":"35"}
+    "products": [
+        {
+            "id": 1,
+            "Title": "เอสเพรสโซ่",
+            "Description": "เข้มข้น ขมพิเศษ",
+            "Price": "60"
+        },
+        {
+            "id": 2,
+            "Title": "Americano",
+            "Description": "เข้มข้น ไม่ใส่นม",
+            "Price": "45"
+        },
+        {
+            "id": 3,
+            "Title": "Mocar",
+            "Description": "เข้มข้น ผสมโกโก้",
+            "Price": "65"
+        },
+        {
+            "id": 4,
+            "Title": "คาปูชิโน่",
+            "Description": "เข้มข้น ราดครีมนม",
+            "Price": "55"
+        },
+        {
+            "id": 5,
+            "Title": "ชานมไข่มุก",
+            "Description": "ชานม พร้อมไข่มุกเคี้ยวหนุบหนับ",
+            "Price": "35"
+        }
     ]
 }
