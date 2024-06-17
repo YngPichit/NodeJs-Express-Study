@@ -8,15 +8,15 @@ const debug = createDebug('app');
 import morgan from 'morgan';
 // const morgan = require('morgan')
 //const path = require('path');
-//import products from "./data/products.json" assert {type:"json"};
+import products from "./src/views/data/products.json" assert {type:"json"};
 //const products = require("./data/products.json");
 import path from 'path';
 import { assert } from 'console';
 const __dirname = path.resolve();
-//const productRouter = express.Router();
+const productRouter = express.Router();
 const app = express();
 const PORT = process.env.PORT || 4000;
-const productsRouter = require ("./src/views/router/productsRouter");
+//const productsRouter = require ("./src/views/router/productsRouter");
 //import productsRouter from "./src/views/router/productsRouter" assert {type :"js"};
 
 app.use(morgan('combined'));
@@ -25,19 +25,19 @@ app.use(express.static(path.join(__dirname,"/public/")));
 app.set("views","./src/views");
 app.set("view engine","ejs");
 
-// productRouter.route("/").get((req,res)=>{
-    // res.render("products",{
-        // products,
-// });
-// });
-// productRouter.route("/:id").get((req,res)=>{
-    // const id = req.params.id;
-    // res.render("product",{
-        // product:products[id],
-    // })
-// });
+ productRouter.route("/").get((req,res)=>{
+     res.render("products",{
+        products,
+ });
+ });
+ productRouter.route("/:id").get((req,res)=>{
+     const id = req.params.id;
+     res.render("product",{
+     product:products[id],
+     })
+ });
 
-app.use("/products",productsRouter);
+app.use("/products",productRouter);
 
 app.get("/",(req,res)=>{
 
