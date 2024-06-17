@@ -1,4 +1,4 @@
-const express = require('express');
+//const express = require('express');
 //const chalk = require('chalk');
 import express from 'express';
 import chalk from 'chalk';
@@ -16,7 +16,8 @@ const __dirname = path.resolve();
 //const productRouter = express.Router();
 const app = express();
 const PORT = process.env.PORT || 4000;
-import productsRouter from "./src/views/router/productsRouter" assert {type :"js"};
+const productsRouter = require ("./src/views/router/productsRouter");
+//import productsRouter from "./src/views/router/productsRouter" assert {type :"js"};
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname,"/public/")));
